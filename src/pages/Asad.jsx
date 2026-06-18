@@ -859,7 +859,7 @@ const Asad = () => {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem' }} className="pourquoi-grid">
             {[
               {
                 icon: ShieldCheck, color: "#10b981", bg: "#e8f4f0",
@@ -877,16 +877,6 @@ const Asad = () => {
                 desc: "Chaque bénéficiaire est unique. Nous évaluons vos besoins à domicile pour construire un plan d'aide adapté à votre situation et votre budget."
               },
               {
-                icon: MapPin, color: "#d4af37", bg: "#fef9ec",
-                title: "Ancrage local fort",
-                desc: "Acteur de proximité, nous connaissons parfaitement le tissu associatif et institutionnel de Bourg-la-Reine pour mieux vous orienter."
-              },
-              {
-                icon: ClipboardCheck, color: "#8b5cf6", bg: "#f5f3ff",
-                title: "Démarches simplifiées",
-                desc: "Nous gérons pour vous les demandes d'APA, de PCH et les dossiers de prise en charge. Vous n'avez qu'à vous concentrer sur votre confort."
-              },
-              {
                 icon: Building2, color: "#064e3b", bg: "#e8f4f0",
                 title: "Partenariats institutionnels",
                 desc: "En lien direct avec la Ville, le CCAS, le Département et l'ARS, nous bénéficions d'un réseau solide pour vous offrir le meilleur service."
@@ -900,27 +890,36 @@ const Asad = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07, duration: 0.4 }}
                 style={{
-                  padding: '3rem',
+                  padding: '2rem 1.5rem',
                   background: '#f8fafc',
                   borderRadius: '24px',
                   border: '1px solid #f1f5f9',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  aspectRatio: '1 / 1',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                  maxWidth: '280px',
+                  margin: '0 auto'
                 }}
               >
                 <div style={{
-                  width: '70px', height: '70px',
+                  width: '60px', height: '60px',
                   background: item.bg,
                   color: item.color,
-                  borderRadius: '20px',
+                  borderRadius: '18px',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  margin: '0 auto 2rem'
+                  margin: '0 auto 1.5rem',
+                  flexShrink: 0
                 }}>
-                  <item.icon size={32} />
+                  <item.icon size={28} />
                 </div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--emerald-900)' }}>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.75rem', color: 'var(--emerald-900)' }}>
                   {item.title}
                 </h3>
-                <p style={{ color: '#64748b', lineHeight: 1.6 }}>
+                <p style={{ color: '#64748b', fontSize: '0.85rem', lineHeight: 1.5, margin: 0 }}>
                   {item.desc}
                 </p>
               </motion.div>
@@ -1007,6 +1006,18 @@ const Asad = () => {
           #quoi .container {
             padding-left: 1.5rem !important;
             padding-right: 1.5rem !important;
+          }
+        }
+
+        /* ===== POURQUOI CHOISIR L'ASAD GRID RESPONSIVE ===== */
+        @media (max-width: 991px) {
+          .pourquoi-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 576px) {
+          .pourquoi-grid {
+            grid-template-columns: 1fr !important;
           }
         }
       `,
