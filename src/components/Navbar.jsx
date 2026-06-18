@@ -66,7 +66,7 @@ const Navbar = () => {
       path: '/asad',
       submenu: [
         { name: "Nos Pôles d'Expertise", path: '/asad#quoi' },
-        { name: "À qui s'adresse l'ASAD", path: '/asad#qui' },
+        { name: "Comment ça marche ?", path: '/asad#comment' },
         { name: "Pourquoi choisir l'ASAD ?", path: '/asad#pourquoi' }
       ]
     },

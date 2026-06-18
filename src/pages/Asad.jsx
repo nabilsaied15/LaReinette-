@@ -403,7 +403,7 @@ const Asad = () => {
       <section id="quoi" style={{ padding: "4rem 0", background: "#fff" }}>
         <div
           className="container"
-          style={{ maxWidth: "100%", width: "100%", padding: "0 2rem" }}
+          style={{ maxWidth: "100%", width: "100%", padding: "0 2rem 0 4rem" }}
         >
           <div
             className="asad-expertise-intro"
@@ -449,161 +449,161 @@ const Asad = () => {
 
               return (
                 <React.Fragment key={i}>
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  onClick={() => s.path && navigate(s.path)}
-                  style={{
-                    background: "transparent",
-                    borderRadius: "0",
-                    border: "none",
-                    boxShadow: "none",
-                    overflow: "visible",
-                    cursor: s.path ? "pointer" : "default",
-                    width: "100%",
-                    padding: "1.25rem 0",
-                    borderBottom: "1px solid var(--border-subtle)",
-                  }}
-                >
-                  <div
-                    className="asad-service-row"
+                  <motion.div
+                    whileHover={{ y: -2 }}
+                    onClick={() => s.path && navigate(s.path)}
                     style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "1rem",
+                      background: "transparent",
+                      borderRadius: "0",
+                      border: "none",
+                      boxShadow: "none",
+                      overflow: "visible",
+                      cursor: s.path ? "pointer" : "default",
+                      width: "100%",
+                      padding: "1.25rem 0",
+                      borderBottom: "1px solid var(--border-subtle)",
                     }}
                   >
-                    {/* Titre et sous-titre */}
                     <div
+                      className="asad-service-row"
                       style={{
                         display: "flex",
-                        alignItems: "baseline",
-                        gap: "0.75rem",
-                        flexWrap: "wrap",
-                        marginLeft: "2rem",
+                        flexDirection: "column",
+                        gap: "1rem",
                       }}
                     >
-                      <div
-                        style={{
-                          fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)",
-                          fontWeight: 900,
-                          color: "var(--primary-gold)",
-                          letterSpacing: "1px",
-                          textTransform: "uppercase",
-                          lineHeight: 1.15,
-                        }}
-                      >
-                        {i + 1 + " . "} {s.title}
-                      </div>
-
-                      <h3
-                        className="font-serif"
-                        style={{
-                          fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)",
-                          marginBottom: "0",
-                          color: "var(--emerald-900)",
-                          lineHeight: 1.15,
-                        }}
-                      >
-                        {s.subtitle}
-                      </h3>
-                    </div>
-
-                    {/* Description */}
-                    <p
-                      style={{
-                        color: "#64748b",
-                        lineHeight: 1.7,
-                        fontSize: "1rem",
-                        margin: 0,
-                        maxWidth: "700px",
-                        marginLeft: "2rem",
-                      }}
-                    >
-                      {s.desc}
-                    </p>
-                  </div>
-
-                  {/* Exemples de services */}
-                  {s.contacts ? (
-                    <div
-                      style={{
-                        width: "100%",
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
-                        gap: "1.5rem",
-                        paddingTop: "1.5rem",
-                        maxWidth: "800px",
-                        margin: "0 auto",
-                      }}
-                    >
-                      {/* Colonne gauche */}
+                      {/* Titre et sous-titre */}
                       <div
                         style={{
                           display: "flex",
-                          flexDirection: "column",
+                          alignItems: "baseline",
                           gap: "0.75rem",
+                          flexWrap: "wrap",
+                          marginLeft: "3rem",
                         }}
                       >
-                        {s.contacts.slice(0, Math.ceil(s.contacts.length / 2)).map((item, itemIndex) => (
-                          <div
-                            key={itemIndex}
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 700,
-                              color: "var(--primary-gold)",
-                              lineHeight: 1.4,
-                            }}
-                          >
-                            - {item.label}
-                          </div>
-                        ))}
+                        <div
+                          style={{
+                            fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)",
+                            fontWeight: 900,
+                            color: "var(--primary-gold)",
+                            letterSpacing: "1px",
+                            textTransform: "uppercase",
+                            lineHeight: 1.15,
+                          }}
+                        >
+                          {i + 1 + " . "} {s.title}
+                        </div>
+
+                        <h3
+                          className="font-serif"
+                          style={{
+                            fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)",
+                            marginBottom: "0",
+                            color: "var(--emerald-900)",
+                            lineHeight: 1.15,
+                          }}
+                        >
+                          {s.subtitle}
+                        </h3>
                       </div>
 
-                      {/* Colonne droite */}
+                      {/* Description */}
+                      <p
+                        style={{
+                          color: "#64748b",
+                          lineHeight: 1.7,
+                          fontSize: "1rem",
+                          margin: 0,
+                          maxWidth: "700px",
+                          marginLeft: "3rem",
+                        }}
+                      >
+                        {s.desc}
+                      </p>
+                    </div>
+
+                    {/* Exemples de services */}
+                    {s.contacts ? (
                       <div
                         style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: "0.75rem",
+                          width: "100%",
+                          display: "grid",
+                          gridTemplateColumns: "1fr 1fr",
+                          gap: "1.5rem",
+                          paddingTop: "1.5rem",
+                          maxWidth: "800px",
+                          margin: "0 auto",
                         }}
                       >
-                        {s.contacts.slice(Math.ceil(s.contacts.length / 2)).map((item, itemIndex) => (
-                          <div
-                            key={itemIndex}
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 700,
-                              color: "var(--primary-gold)",
-                              lineHeight: 1.4,
-                            }}
-                          >
-                            - {item.label}
-                          </div>
-                        ))}
+                        {/* Colonne gauche */}
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.75rem",
+                          }}
+                        >
+                          {s.contacts.slice(0, Math.ceil(s.contacts.length / 2)).map((item, itemIndex) => (
+                            <div
+                              key={itemIndex}
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 700,
+                                color: "var(--primary-gold)",
+                                lineHeight: 1.4,
+                              }}
+                            >
+                              - {item.label}
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Colonne droite */}
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.75rem",
+                          }}
+                        >
+                          {s.contacts.slice(Math.ceil(s.contacts.length / 2)).map((item, itemIndex) => (
+                            <div
+                              key={itemIndex}
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 700,
+                                color: "var(--primary-gold)",
+                                lineHeight: 1.4,
+                              }}
+                            >
+                              - {item.label}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
+
+                    {/* Contact : icônes uniquement */}
+                    <div style={{
+                      padding: "1rem 0 0.5rem 0",
+                      marginTop: "0.5rem",
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      gap: "2.5rem",
+                      alignItems: "center",
+                    }} className="asad-contact-row">
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "1.1rem", color: "var(--emerald-900)", fontWeight: 700 }}>
+                        <Phone size={20} color="var(--primary-gold)" />
+                        <a href={`tel:${s.phoneHref}`} style={{ color: "inherit", textDecoration: "none" }}>{s.phone}</a>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "0.95rem", color: "#334155", fontWeight: 600 }}>
+                        <Mail size={20} color="var(--primary-gold)" />
+                        <a href={`mailto:${s.email}`} style={{ color: "inherit", textDecoration: "none" }}>{s.email}</a>
                       </div>
                     </div>
-                  ) : null}
-
-                {/* Contact : icônes uniquement */}
-                <div style={{
-                  padding: "1rem 0 0.5rem 0",
-                  marginTop: "0.5rem",
-                  display: "flex",
-                  justifyContent: "center",
-                  flexWrap: "wrap",
-                  gap: "2.5rem",
-                  alignItems: "center",
-                }} className="asad-contact-row">
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "1.1rem", color: "var(--emerald-900)", fontWeight: 700 }}>
-                    <Phone size={20} color="var(--primary-gold)" />
-                    <a href={`tel:${s.phoneHref}`} style={{ color: "inherit", textDecoration: "none" }}>{s.phone}</a>
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "0.95rem", color: "#334155", fontWeight: 600 }}>
-                    <Mail size={20} color="var(--primary-gold)" />
-                    <a href={`mailto:${s.email}`} style={{ color: "inherit", textDecoration: "none" }}>{s.email}</a>
-                  </div>
-                </div>
-                </motion.div>
+                  </motion.div>
                 </React.Fragment>
               );
             })}
@@ -735,7 +735,7 @@ const Asad = () => {
       </section>
 
       {/* COMMENT ÇA MARCHE */}
-      <section style={{ padding: "5rem 0", background: "#fff" }}>
+      <section id="comment" style={{ padding: "5rem 0", background: "#fff" }}>
         <div className="container" style={{ maxWidth: "780px", padding: "0 1.5rem" }}>
 
           {/* Header */}
@@ -846,6 +846,90 @@ const Asad = () => {
         </div>
       </section>
 
+      {/* POURQUOI CHOISIR L'ASAD */}
+      <section id="pourquoi" style={{ padding: '100px 0', background: '#fff' }}>
+        <div className="container">
+
+          <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
+            <h2 className="font-serif" style={{ fontSize: '2.5rem', color: 'var(--emerald-900)', marginBottom: '1.5rem' }}>
+              Pourquoi choisir l'ASAD ?
+            </h2>
+            <p style={{ color: '#64748b', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto', lineHeight: 1.7 }}>
+              Depuis 1961, nous accompagnons les seniors de Bourg-la-Reine avec expertise, humanité et engagement.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
+            {[
+              {
+                icon: ShieldCheck, color: "#10b981", bg: "#e8f4f0",
+                title: "Plus de 60 ans d'expérience",
+                desc: "Association réginaburgienne fondée en 1961, l'ASAD est un acteur de référence reconnu par les institutions locales et régionales."
+              },
+              {
+                icon: Users, color: "#3b82f6", bg: "#eff6ff",
+                title: "Une équipe pluridisciplinaire",
+                desc: "Auxiliaires de vie, infirmiers, coordinatrices : nos professionnels qualifiés forment une équipe soudée autour de votre bien-être."
+              },
+              {
+                icon: Heart, color: "#ef4444", bg: "#fef2f2",
+                title: "Un accompagnement sur mesure",
+                desc: "Chaque bénéficiaire est unique. Nous évaluons vos besoins à domicile pour construire un plan d'aide adapté à votre situation et votre budget."
+              },
+              {
+                icon: MapPin, color: "#d4af37", bg: "#fef9ec",
+                title: "Ancrage local fort",
+                desc: "Acteur de proximité, nous connaissons parfaitement le tissu associatif et institutionnel de Bourg-la-Reine pour mieux vous orienter."
+              },
+              {
+                icon: ClipboardCheck, color: "#8b5cf6", bg: "#f5f3ff",
+                title: "Démarches simplifiées",
+                desc: "Nous gérons pour vous les demandes d'APA, de PCH et les dossiers de prise en charge. Vous n'avez qu'à vous concentrer sur votre confort."
+              },
+              {
+                icon: Building2, color: "#064e3b", bg: "#e8f4f0",
+                title: "Partenariats institutionnels",
+                desc: "En lien direct avec la Ville, le CCAS, le Département et l'ARS, nous bénéficions d'un réseau solide pour vous offrir le meilleur service."
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -10 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07, duration: 0.4 }}
+                style={{
+                  padding: '3rem',
+                  background: '#f8fafc',
+                  borderRadius: '24px',
+                  border: '1px solid #f1f5f9',
+                  textAlign: 'center'
+                }}
+              >
+                <div style={{
+                  width: '70px', height: '70px',
+                  background: item.bg,
+                  color: item.color,
+                  borderRadius: '20px',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  margin: '0 auto 2rem'
+                }}>
+                  <item.icon size={32} />
+                </div>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--emerald-900)' }}>
+                  {item.title}
+                </h3>
+                <p style={{ color: '#64748b', lineHeight: 1.6 }}>
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -917,6 +1001,14 @@ const Asad = () => {
         }
 
         /* ===== COMMENT ÇA MARCHE — mobile vertical ===== */
+
+        /* ===== SERVICES — réduit le padding gauche sur mobile ===== */
+        @media (max-width: 768px) {
+          #quoi .container {
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+          }
+        }
       `,
         }}
       />
