@@ -1,0 +1,1637 @@
+﻿/* La Reinette page — layout & responsive */
+
+.la-reinette-page {
+    background: var(--bg-white);
+    color: var(--text-main);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.la-reinette-page .reinette-section {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.la-reinette-page .container {
+    min-width: 0;
+}
+
+.reinette-hero-grid>*,
+.value-grid>*,
+.reinette-values-list>*,
+.reinette-stats-grid>*,
+.quality-grid>*,
+.eligibility-grid>*,
+.booking-steps-grid>*,
+.la-reinette-page .universe-grid>*,
+.la-reinette-page .contact-grid>*,
+.reinette-reviews-page>* {
+    min-width: 0;
+}
+
+/* --- TRUST MARQUEE --- */
+.reinette-trust-bar {
+    padding: 2.2rem 0 !important;
+    background: #fff;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+@keyframes trustMarquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.trust-marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg,
+            transparent 0%,
+            #000 12%,
+            #000 88%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg,
+            transparent 0%,
+            #000 12%,
+            #000 88%,
+            transparent 100%);
+}
+
+.trust-track {
+    display: flex;
+    flex-wrap: nowrap !important;
+    gap: 3.5rem;
+    align-items: center;
+    width: max-content;
+    animation: trustMarquee 25s linear infinite;
+}
+
+.trust-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    background: #fff;
+    color: rgba(15, 23, 42, 0.68);
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* --- HERO --- */
+.reinette-hero-section {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.reinette-hero-grid {
+    display: grid;
+    gap: 6rem;
+    align-items: center;
+    grid-template-columns: 1fr;
+}
+
+.reinette-hero-header {
+    margin-bottom: 1.25rem;
+}
+
+.reinette-hero-label {
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.reinette-hero-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--emerald-900);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.reinette-hero-description {
+    font-size: 1.20rem;
+    color: #64748b;
+    max-width: 650px;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.reinette-hero-cta {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reinette-hero-btn {
+    font-size: 1.1rem;
+    padding: 1.5rem 4rem;
+    border-radius: 100px;
+    background: var(--emerald-900);
+    font-weight: 800;
+    box-shadow: 0 10px 30px rgba(6, 78, 59, 0.15);
+}
+
+.reinette-hero-phone-block {
+    display: flex;
+    flex-direction: column;
+    color: var(--emerald-900);
+}
+
+.reinette-hero-phone-label {
+    font-size: 0.75rem;
+    font-weight: 900;
+    opacity: 0.4;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.reinette-hero-phone-value {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.reinette-hero-phone-block {
+    min-width: 0;
+}
+
+.reinette-hero-visual {
+    position: relative;
+    min-width: 0;
+}
+
+.reinette-hero-halo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    height: 130%;
+    background: radial-gradient(circle,
+            rgba(212, 175, 55, 0.08) 0%,
+            transparent 65%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.reinette-hero-image {
+    width: 135%;
+    height: auto;
+    max-width: none;
+    margin-left: -15%;
+    margin-top: -25rem;
+    mask-image: radial-gradient(circle at center, black 65%, transparent 98%);
+    -webkit-mask-image: radial-gradient(circle at center,
+            black 65%,
+            transparent 98%);
+    filter: brightness(1.05) contrast(1.1);
+    border: none;
+    outline: none;
+    display: block;
+}
+
+/* --- VALUE / EXCELLENCE --- */
+.value-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.reinette-value-image-wrap {
+    position: relative;
+    min-width: 0;
+}
+
+.reinette-value-photo-frame {
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid #e5e0d8;
+    background: #fff;
+    padding: 1rem;
+}
+
+.reinette-value-photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.reinette-expertise-badge {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    background: var(--emerald-900);
+    color: #fff;
+    padding: 3rem;
+    border-radius: 2px;
+    text-align: center;
+    min-width: 220px;
+}
+
+.reinette-expertise-number {
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: var(--font-display);
+    color: var(--primary-gold);
+    line-height: 1;
+}
+
+.reinette-expertise-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.reinette-values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem 2.5rem;
+}
+
+.reinette-value-item {
+    border-top: 1px solid #e5e0d8;
+    padding-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.reinette-value-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-gold);
+    flex-shrink: 0;
+}
+
+/* --- STATS (dark) --- */
+.reinette-stats-section {
+    padding: 6rem 0;
+    background: var(--emerald-900);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.reinette-stats-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.reinette-stats-badge {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 100px;
+    color: var(--primary-gold);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.reinette-stats-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: #fff;
+    line-height: 1.1;
+}
+
+.reinette-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 4rem;
+    text-align: center;
+}
+
+.reinette-stat-number {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: var(--primary-gold);
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+}
+
+/* --- SECTION INTROS --- */
+.reinette-section-intro {
+    text-align: left;
+    margin-bottom: 4rem;
+    border-left: 1px solid var(--border-subtle);
+    padding-left: 3rem;
+}
+
+.reinette-section-center {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* --- GRIDS --- */
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+}
+
+.eligibility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+    border: 1px solid #e5e0d8;
+}
+
+.eligibility-card {
+    background: #fff;
+    padding: 5rem 4rem;
+    position: relative;
+}
+
+.eligibility-card:not(:last-child) {
+    border-right: 1px solid #e5e0d8;
+}
+
+.reinette-pricing-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.reinette-pricing-pill {
+    background: #f9f7f2;
+    padding: 1.5rem 2.5rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--emerald-900);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.reinette-tarifs-btn {
+    padding: 1.5rem 4rem;
+    border-radius: 100px;
+    border: none;
+    background: var(--emerald-900);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.reinette-payment-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+}
+
+.reinette-payment-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.booking-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+}
+
+.booking-step {
+    text-align: center;
+    position: relative;
+}
+
+.booking-step-bg {
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.03);
+    line-height: 1;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.booking-step-connector {
+    position: absolute;
+    top: 40px;
+    right: -2rem;
+    width: 4rem;
+    height: 1px;
+    background: var(--border-subtle);
+}
+
+/* --- HORAIRES --- */
+.reinette-horaires-section {
+    border-top: 1px solid #e5e0d8;
+    border-bottom: 1px solid #e5e0d8;
+}
+
+.reinette-horaires-times {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reinette-horaires-day {
+    font-size: 1.5rem;
+    color: var(--emerald-900);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reinette-horaires-hours {
+    font-size: 1.5rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.reinette-horaires-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-gold);
+    flex-shrink: 0;
+}
+
+/* --- UNIVERSE (override global index.css) --- */
+.la-reinette-page .universe-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 2rem;
+}
+
+.la-reinette-page .universe-grid>div {
+    aspect-ratio: auto !important;
+}
+
+.reinette-universe-card {
+    background: #fff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-subtle);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+}
+
+/* --- CONTACT BLOCK (bottom) --- */
+.la-reinette-page .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.reinette-call-card {
+    display: block;
+    background: #fff;
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    text-decoration: none;
+    padding: 0;
+}
+
+.reinette-call-number {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 900;
+    color: var(--primary-gold);
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    word-break: break-word;
+}
+
+/* --- DESKTOP HERO 2 COLS --- */
+@media (min-width: 1024px) {
+    .reinette-hero-grid {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .la-reinette-page .universe-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* --- TABLET / iPad (≤1024) --- */
+@media (max-width: 1024px) {
+    .la-reinette-page .reinette-section {
+        padding: 3.5rem 0 !important;
+    }
+
+    .la-reinette-page .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .reinette-hero-section {
+        padding-top: 140px;
+        padding-bottom: 4rem;
+    }
+
+    .reinette-hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .reinette-hero-header {
+        margin-bottom: 1rem;
+    }
+
+    .reinette-hero-label {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+        margin-bottom: 1.25rem;
+    }
+
+    .reinette-hero-title {
+        font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+        margin-bottom: 1rem;
+        letter-spacing: -1px;
+        line-height: 1.1;
+    }
+
+    .reinette-hero-description {
+        font-size: 1.15rem;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .reinette-hero-cta {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .reinette-hero-btn {
+        padding: 1.15rem 2.5rem;
+        font-size: 1rem;
+        width: auto;
+    }
+
+    .reinette-hero-image {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .reinette-hero-halo {
+        width: 115%;
+        height: 115%;
+    }
+
+    .value-grid,
+    .la-reinette-page .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+    .reinette-values-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem 1.5rem;
+    }
+
+    .reinette-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+
+    .reinette-stat-number {
+        font-size: 3.5rem;
+    }
+
+    .la-reinette-page .universe-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    .quality-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+
+    .eligibility-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .eligibility-card {
+        padding: 3rem 2rem !important;
+    }
+
+    .eligibility-card:nth-child(3) {
+        grid-column: 1 / -1;
+        border-right: none !important;
+    }
+
+    .eligibility-card:nth-child(2) {
+        border-right: none !important;
+    }
+
+    .booking-steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+
+    .booking-step-connector {
+        display: none !important;
+    }
+
+    .reinette-pricing-pills {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .reinette-pricing-pill {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: min(100%, 260px);
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        padding: 1rem 1.75rem;
+        font-size: 0.95rem;
+    }
+
+    .reinette-payment-notice {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    .reinette-payment-body {
+        min-width: 0 !important;
+        flex: 1 1 320px;
+    }
+
+    .reinette-payment-assist {
+        margin-left: 0 !important;
+        align-self: center !important;
+    }
+
+    .reinette-section-intro {
+        padding-left: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .reinette-expertise-badge {
+        bottom: -20px;
+        right: -10px;
+        padding: 2rem !important;
+        min-width: 180px;
+    }
+
+    .reinette-expertise-number {
+        font-size: 2.5rem !important;
+    }
+
+    .la-reinette-page .contact-grid {
+        text-align: left;
+    }
+
+    .reinette-call-number {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .value-grid,
+    .la-reinette-page .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+}
+
+/* iPad portrait étroit : hero une colonne */
+@media (max-width: 900px) and (min-width: 769px) {
+    .reinette-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .reinette-hero-visual {
+        order: -1;
+    }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .la-reinette-page .reinette-section {
+        padding: 3rem 0 !important;
+    }
+
+    .la-reinette-page .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .reinette-trust-bar {
+        padding: 1.5rem 0 !important;
+    }
+
+    .trust-marquee {
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+
+    .trust-pill {
+        font-size: 0.82rem;
+        letter-spacing: 1.5px;
+        padding: 0.75rem 1rem;
+    }
+
+    .trust-track {
+        gap: 2rem;
+        animation-duration: 20s;
+    }
+
+    .reinette-hero-section {
+        padding-top: 7rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .reinette-hero-grid {
+        gap: 1.5rem !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .reinette-hero-visual {
+        order: -1;
+        margin-top: 0;
+    }
+
+    .reinette-hero-header {
+        padding-left: 0 !important;
+        border-left: none !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .reinette-hero-label {
+        letter-spacing: 2px !important;
+        font-size: 0.8rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .reinette-hero-title {
+        font-size: clamp(1.5rem, 8vw, 2.2rem) !important;
+        letter-spacing: -0.5px !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.15 !important;
+        overflow-wrap: anywhere;
+    }
+
+    .reinette-hero-description {
+        margin: 0 auto !important;
+        font-size: 1.05rem !important;
+        max-width: 100% !important;
+    }
+
+    .reinette-hero-cta {
+        padding-left: 0 !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1.25rem !important;
+        width: 100%;
+    }
+
+    .reinette-hero-btn {
+        width: 100% !important;
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+
+    .reinette-hero-phone-block {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .reinette-hero-phone-value {
+        font-size: 1.35rem !important;
+    }
+
+    .reinette-hero-halo {
+        width: 110%;
+        height: 110%;
+    }
+
+    .reinette-hero-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .value-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .value-grid>div:first-child {
+        text-align: center;
+    }
+
+    .value-grid .section-label {
+        justify-content: center !important;
+    }
+
+    .reinette-expertise-badge {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        margin: 1.5rem auto 0 !important;
+        min-width: 0 !important;
+        width: fit-content;
+        padding: 1.5rem 2rem !important;
+    }
+
+    .reinette-expertise-number {
+        font-size: 2.2rem !important;
+    }
+
+    .reinette-values-list,
+    .reinette-stats-grid,
+    .la-reinette-page .universe-grid,
+    .quality-grid,
+    .eligibility-grid,
+    .booking-steps-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .reinette-value-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .la-reinette-page .section-title {
+        font-size: clamp(1.75rem, 7vw, 2.2rem) !important;
+        line-height: 1.15 !important;
+    }
+
+    .la-reinette-page .section-label {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .reinette-stats-section {
+        padding: 3rem 0 !important;
+    }
+
+    .reinette-stats-header {
+        margin-bottom: 2.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .reinette-stat-number {
+        font-size: 3rem !important;
+    }
+
+    .reinette-section-intro {
+        padding-left: 0 !important;
+        border-left: none !important;
+        text-align: center !important;
+    }
+
+    .eligibility-grid {
+        border: none !important;
+    }
+
+    .eligibility-card {
+        padding: 2rem 1.25rem !important;
+        border-right: none !important;
+        border-bottom: 1px solid #e5e0d8 !important;
+    }
+
+    .eligibility-card:last-child {
+        border-bottom: none !important;
+    }
+
+    .eligibility-card h4 {
+        font-size: 1.5rem !important;
+    }
+
+    .reinette-pricing-pills {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .reinette-pricing-pill {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: normal !important;
+        font-size: 0.95rem !important;
+        padding: 1rem 1.25rem !important;
+        border-radius: 12px !important;
+    }
+
+    .reinette-tarifs-btn-wrap {
+        padding: 0 0.5rem;
+    }
+
+    .reinette-tarifs-btn {
+        width: 100% !important;
+        padding: 1rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    .reinette-payment-notice {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        padding: 0 0.5rem;
+    }
+
+    .reinette-payment-body {
+        min-width: 0 !important;
+        width: 100%;
+    }
+
+    .reinette-payment-assist {
+        width: 100%;
+        margin-left: 0 !important;
+        align-self: center !important;
+        text-align: center;
+    }
+
+    .booking-step-connector {
+        display: none !important;
+    }
+
+    .booking-step-bg {
+        font-size: 5rem !important;
+        top: -1rem !important;
+    }
+
+    .la-reinette-page .contact-grid {
+        gap: 2rem !important;
+        text-align: center;
+    }
+
+    .la-reinette-page .contact-grid .section-label {
+        justify-content: center !important;
+    }
+
+    .la-reinette-page .contact-grid p {
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reinette-call-card {
+        max-width: 100%;
+    }
+
+    .reinette-review-card {
+        padding: 1.5rem;
+    }
+
+    .reinette-reviews-nav {
+        gap: 1rem;
+    }
+
+    .reinette-reviews-nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .reinette-horaires-day,
+    .reinette-horaires-hours {
+        font-size: 1.1rem !important;
+    }
+
+    .la-reinette-page .universe-grid>div,
+    .reinette-universe-card {
+        aspect-ratio: auto !important;
+        min-height: auto !important;
+        padding: 1.75rem 1.25rem !important;
+    }
+
+    .la-reinette-page .universe-grid h3 {
+        font-size: 1.2rem !important;
+    }
+}
+
+
+/* ===== AVIS CLIENTS — VERSION SENIORS ===== */
+.reinette-reviews-section {
+    padding: 5rem 0 6rem;
+    background: #f7f5f0;
+}
+
+.reinette-reviews-intro {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.reinette-reviews-loading,
+.reinette-reviews-empty {
+    text-align: center;
+    color: #64748b;
+    font-size: 1.2rem;
+    padding: 2.5rem 0;
+}
+
+.reinette-reviews-carousel {
+    margin-bottom: 3rem;
+}
+
+.reinette-reviews-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.reinette-reviews-track {
+    display: flex;
+    will-change: transform;
+}
+
+.reinette-reviews-page {
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* ── Carte ── */
+.reinette-review-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem 1.75rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+    box-shadow: 0 2px 16px rgba(6,78,59,0.07);
+    border: none;
+    transition: box-shadow 0.2s;
+}
+.reinette-review-card:hover {
+    box-shadow: 0 6px 28px rgba(6,78,59,0.13);
+}
+
+/* Guillemet + étoiles */
+.reinette-review-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reinette-review-quote-icon {
+    color: var(--primary-gold);
+    opacity: 1;
+}
+
+.reinette-review-stars {
+    display: flex;
+    gap: 4px;
+}
+.reinette-review-stars svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Texte du commentaire */
+.reinette-review-text {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #374151;
+    font-style: normal;
+    margin: 0;
+}
+
+/* Auteur */
+.reinette-review-author {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f0ebe1;
+    margin-top: auto;
+}
+
+.reinette-review-author::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--emerald-900) 0%, #0f7a5a 100%);
+    flex-shrink: 0;
+}
+
+.reinette-review-author strong {
+    color: var(--emerald-900);
+    font-size: 1rem;
+    font-weight: 800;
+    display: block;
+    line-height: 1.3;
+}
+
+.reinette-review-author span {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    display: block;
+    margin-top: 0.15rem;
+}
+
+/* ── Navigation ── */
+.reinette-reviews-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.reinette-reviews-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid var(--emerald-900);
+    background: #fff;
+    color: var(--emerald-900);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+.reinette-reviews-nav-btn:hover:not(:disabled) {
+    background: var(--emerald-900);
+    color: #fff;
+    transform: scale(1.07);
+}
+.reinette-reviews-nav-btn:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.reinette-reviews-counter {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--emerald-900);
+    min-width: 4rem;
+    text-align: center;
+}
+
+/* ── Formulaire ── */
+.reinette-review-form {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    max-width: 680px;
+    margin: 2rem auto 0;
+    box-shadow: 0 2px 16px rgba(6,78,59,0.07);
+}
+
+.reinette-review-form-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+    color: var(--emerald-900);
+}
+.reinette-review-form-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.reinette-review-form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.reinette-review-input,
+.reinette-review-textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1.5px solid #e2ddd4;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    color: #1e293b;
+    background: #fafaf8;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+.reinette-review-input:focus,
+.reinette-review-textarea:focus {
+    outline: none;
+    border-color: var(--emerald-900);
+    box-shadow: 0 0 0 3px rgba(6,78,59,0.08);
+}
+.reinette-review-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.reinette-review-form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.reinette-review-stars-input {
+    display: flex;
+    gap: 0.3rem;
+}
+.reinette-star-btn {
+    background: none;
+    border: none;
+    padding: 0.15rem;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.reinette-star-btn:hover { transform: scale(1.2); }
+.reinette-star-btn svg { width: 28px; height: 28px; }
+
+.reinette-review-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0.9rem 2rem;
+    border-radius: 12px;
+    min-height: 50px;
+}
+
+.reinette-review-feedback {
+    margin: 1rem 0 0;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+}
+.reinette-review-feedback.success {
+    color: #065f46;
+    background: #d1fae5;
+}
+.reinette-review-feedback.error {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .reinette-reviews-page {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .reinette-review-card {
+        padding: 1.75rem 1.5rem;
+    }
+    .reinette-review-text {
+        font-size: 1rem;
+    }
+    .reinette-reviews-nav-btn {
+        width: 48px;
+        height: 48px;
+    }
+    .reinette-review-form {
+        padding: 1.75rem 1.25rem;
+    }
+    .reinette-review-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .reinette-review-submit {
+        width: 100%;
+        justify-content: center;
+    }
+    .reinette-star-btn svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .reinette-hero-section {
+        padding-top: 6rem !important;
+    }
+
+    .reinette-hero-btn,
+    .reinette-tarifs-btn,
+    .reinette-review-submit {
+        min-height: 48px;
+    }
+
+    .reinette-hero-phone-value {
+        font-size: 1.2rem !important;
+    }
+
+    .reinette-stat-number {
+        font-size: 2.5rem !important;
+    }
+
+    .reinette-call-number {
+        font-size: clamp(1.75rem, 10vw, 2.5rem) !important;
+    }
+
+    .reinette-review-form {
+        padding: 1.25rem;
+    }
+}
+
+.reinette-hero-top-intro {
+    font-size: 1.25rem;
+    color: var(--emerald-900);
+    line-height: 1.65;
+    margin-bottom: 4.5rem;
+    max-width: 650px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+@media (max-width: 1024px) {
+    .reinette-hero-top-intro {
+        font-size: 1.15rem;
+        margin-bottom: 2.5rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reinette-hero-top-intro {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+/* --- SIMPLE SENIOR RESERVATION --- */
+.reservation-section {
+    padding: 5rem 0;
+    background: #fdfcf9; /* Soft, warm, senior-friendly off-white background */
+    border-top: 1px solid #e5e0d8;
+    border-bottom: 1px solid #e5e0d8;
+}
+
+.reservation-title {
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    color: var(--emerald-900);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.reservation-subtitle {
+    color: #475569;
+    font-size: 1.25rem; /* Large text for readability */
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    line-height: 1.7;
+}
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 3.5rem auto 0;
+}
+
+.reservation-card {
+    background: #ffffff;
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    border: 2px solid #cbd5e1; /* Clear thick gray border for excellent contrast */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 310px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Very soft shadow, no heavy hover transitions */
+}
+
+.reservation-icon-wrap {
+    color: var(--primary-gold);
+    margin-bottom: 1.5rem;
+}
+
+.reservation-card-title {
+    font-size: 1.6rem;
+    color: var(--emerald-900);
+    margin-bottom: 0.75rem;
+    font-weight: 800; /* Extra bold */
+}
+
+.reservation-card-desc {
+    color: #475569;
+    font-size: 1.15rem; /* Larger font size */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.reservation-link {
+    font-size: 1.5rem; /* Large font size for tapping/reading */
+    font-weight: 800;
+    color: var(--emerald-900);
+    text-decoration: underline;
+    word-break: break-all;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: rgba(6, 78, 59, 0.05); /* Clear visual indicator for links */
+    border-radius: 6px;
+    border: 1px solid rgba(6, 78, 59, 0.15);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.reservation-link:hover {
+    color: #fff;
+    background: var(--emerald-900); /* High-contrast simple hover */
+    text-decoration: none;
+}
+
+.reservation-link-email {
+    font-size: 1.15rem;
+}
+
+.reservation-address {
+    font-size: 1.20rem; /* Very readable address text */
+    font-weight: 700;
+    color: var(--emerald-900);
+    line-height: 1.6;
+}
+
+/* --- MAP STYLES FROM TARIFS --- */
+.tarifs-zone-map {
+  position: relative;
+  min-height: 400px;
+  border: 1px solid #e5e0d8;
+  border-radius: 18px;
+  background: #f8fafc;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.tarifs-zone-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: 0;
+  display: block;
+}
+
+.tarifs-map-overlay {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e5e0d8;
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  color: var(--emerald-900);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  z-index: 1000; /* Ensure overlay is visible over Leaflet */
+}
+
+.tarifs-map-overlay img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.tarifs-map-overlay--brand {
+  right: 10px;
+  bottom: 10px;
+  background: rgba(16, 185, 129, 0.95);
+  color: #fff;
+  border-color: var(--primary-green);
+}
+
+.tarifs-map-overlay--local {
+  left: 10px;
+  top: 10px;
+  background: var(--primary-green);
+  color: #fff;
+  border-color: var(--primary-green);
+}
+
+.tarifs-map-overlay--nearby {
+  left: 10px;
+  top: 42px;
+  background: var(--primary-gold);
+  color: #fff;
+  border-color: var(--primary-gold);
+}
+
+.tarifs-map-overlay--nearby-94 {
+  left: 10px;
+  top: 74px;
+  background: var(--emerald-700);
+  color: #fff;
+  border-color: var(--emerald-700);
+}
+
+.tarifs-map-overlay--hospital {
+  right: 10px;
+  top: 10px;
+  background: var(--emerald-800);
+  color: #fff;
+  border-color: var(--emerald-800);
+}
+
+.tarifs-map-overlay--distance {
+  left: 10px;
+  bottom: 10px;
+  background: var(--emerald-900);
+  color: #fff;
+  border-color: var(--emerald-900);
+}
+
+@media (max-width: 768px) {
+  .tarifs-zone-map {
+    min-height: 280px;
+  }
+
+  .tarifs-zone-map iframe {
+    min-height: 280px;
+  }
+
+  .tarifs-map-overlay {
+    padding: 0.28rem 0.5rem;
+    font-size: 0.64rem;
+  }
+
+  .tarifs-map-overlay--brand { right: 8px; bottom: 8px; }
+  .tarifs-map-overlay--local { left: 8px; top: 8px; }
+  .tarifs-map-overlay--nearby { left: 8px; top: 34px; }
+  .tarifs-map-overlay--nearby-94 { left: 8px; top: 60px; }
+  .tarifs-map-overlay--hospital { right: 8px; top: 8px; }
+  .tarifs-map-overlay--distance { left: 8px; bottom: 8px; }
+}

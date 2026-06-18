@@ -1,0 +1,1708 @@
+/* Tarifs La Reinette - simple inline page style */
+
+.tarifs-page {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.tarifs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarifs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  color: var(--emerald-900);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.tarifs-hero {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.tarifs-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--emerald-900);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.tarifs-hero-sub {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #8c8479;
+  line-height: 1.6;
+}
+
+.tarifs-zones-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+
+.tarifs-zone-section {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.tarifs-zone-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.tarifs-zone-title {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  color: var(--emerald-900);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.tarifs-zone-count {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.tarifs-dash-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 0.4rem 1.2rem;
+}
+
+.tarifs-dash-list li {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.tarifs-dash-list li::before {
+  content: "- ";
+  color: #64748b;
+  font-weight: 700;
+}
+
+.tarifs-quote-cta {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.tarifs-quote-cta__title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  color: var(--emerald-900);
+}
+
+.tarifs-quote-cta__text {
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.tarifs-quote-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.35rem;
+  background: var(--emerald-900);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tarifs-disclaimer {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.tarifs-disclaimer-logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarifs-disclaimer-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tarifs-disclaimer-text {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .tarifs-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarifs-page {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .tarifs-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .tarifs-back-btn {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .tarifs-hero {
+    margin-bottom: 2rem;
+  }
+
+  .tarifs-hero-sub {
+    font-size: 1rem;
+  }
+
+  .tarifs-zone-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .tarifs-zone-title {
+    font-size: 1.1rem;
+  }
+
+  .tarifs-zone-count {
+    font-size: 0.68rem;
+  }
+
+  .tarifs-dash-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .tarifs-dash-list li {
+    font-size: 0.88rem;
+  }
+
+  .tarifs-quote-cta {
+    margin-top: 2.2rem;
+    padding-top: 1.4rem;
+  }
+
+  .tarifs-quote-cta__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tarifs-disclaimer {
+    margin-top: 1.6rem;
+    padding-top: 1rem;
+    gap: 0.7rem;
+  }
+
+  .tarifs-disclaimer-text {
+    font-size: 0.84rem;
+  }
+}
+/* Tarifs La Reinette - simple inline page style */
+
+.tarifs-page {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.tarifs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarifs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  color: var(--emerald-900);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.tarifs-hero {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.tarifs-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--emerald-900);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.tarifs-hero-sub {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #8c8479;
+  line-height: 1.6;
+}
+
+.tarifs-zones-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+
+.tarifs-zone-section {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.tarifs-zone-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.tarifs-zone-title {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  color: var(--emerald-900);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.tarifs-zone-count {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.tarifs-dash-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 0.4rem 1.2rem;
+}
+
+.tarifs-dash-list li {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.tarifs-dash-list li::before {
+  content: "- ";
+  color: #64748b;
+  font-weight: 700;
+}
+
+.tarifs-quote-cta {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.tarifs-quote-cta__title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  color: var(--emerald-900);
+}
+
+.tarifs-quote-cta__text {
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.tarifs-quote-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.35rem;
+  background: var(--emerald-900);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tarifs-disclaimer {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.tarifs-disclaimer-logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarifs-disclaimer-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tarifs-disclaimer-text {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .tarifs-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarifs-page {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .tarifs-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .tarifs-back-btn {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .tarifs-hero {
+    margin-bottom: 2rem;
+  }
+
+  .tarifs-hero-sub {
+    font-size: 1rem;
+  }
+
+  .tarifs-zone-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .tarifs-zone-title {
+    font-size: 1.1rem;
+  }
+
+  .tarifs-zone-count {
+    font-size: 0.68rem;
+  }
+
+  .tarifs-dash-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .tarifs-dash-list li {
+    font-size: 0.88rem;
+  }
+
+  .tarifs-quote-cta {
+    margin-top: 2.2rem;
+    padding-top: 1.4rem;
+  }
+
+  .tarifs-quote-cta__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tarifs-disclaimer {
+    margin-top: 1.6rem;
+    padding-top: 1rem;
+    gap: 0.7rem;
+  }
+
+  .tarifs-disclaimer-text {
+    font-size: 0.84rem;
+  }
+}
+/* Page Tarifs La Reinette - simple style */
+
+.tarifs-page {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.tarifs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarifs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  color: var(--emerald-900);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.tarifs-hero {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.tarifs-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--emerald-900);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.tarifs-hero-sub {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #8c8479;
+  line-height: 1.6;
+}
+
+.tarifs-zones-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+
+.tarifs-zone-section {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.tarifs-zone-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.tarifs-zone-title {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  color: var(--emerald-900);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.tarifs-zone-count {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.tarifs-dash-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 0.4rem 1.2rem;
+}
+
+.tarifs-dash-list li {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.tarifs-dash-list li::before {
+  content: "- ";
+  color: #64748b;
+  font-weight: 700;
+}
+
+.tarifs-quote-cta {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.tarifs-quote-cta__title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  color: var(--emerald-900);
+}
+
+.tarifs-quote-cta__text {
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.tarifs-quote-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.35rem;
+  background: var(--emerald-900);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tarifs-disclaimer {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.tarifs-disclaimer-logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarifs-disclaimer-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tarifs-disclaimer-text {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .tarifs-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarifs-page {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .tarifs-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .tarifs-back-btn {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .tarifs-hero {
+    margin-bottom: 2rem;
+  }
+
+  .tarifs-hero-sub {
+    font-size: 1rem;
+  }
+
+  .tarifs-zone-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .tarifs-zone-title {
+    font-size: 1.1rem;
+  }
+
+  .tarifs-zone-count {
+    font-size: 0.68rem;
+  }
+
+  .tarifs-dash-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .tarifs-dash-list li {
+    font-size: 0.88rem;
+  }
+
+  .tarifs-quote-cta {
+    margin-top: 2.2rem;
+    padding-top: 1.4rem;
+  }
+
+  .tarifs-quote-cta__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tarifs-disclaimer {
+    margin-top: 1.6rem;
+    padding-top: 1rem;
+    gap: 0.7rem;
+  }
+
+  .tarifs-disclaimer-text {
+    font-size: 0.84rem;
+  }
+}
+/* Page Tarifs La Reinette - aligned with site pages */
+
+.tarifs-page {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.tarifs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarifs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  color: var(--emerald-900);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+}
+
+.tarifs-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.2rem 2rem;
+  border-left: 1px solid #e5e0d8;
+  background: #fff;
+}
+
+.tarifs-hero h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  color: var(--emerald-900);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.tarifs-hero-sub {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  color: #8c8479;
+  line-height: 1.65;
+}
+
+.tarifs-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.tarifs-zone-section {
+  border: 1px solid #e5e0d8;
+  border-radius: 20px;
+  background: #fff;
+  padding: 1.25rem 1.2rem;
+}
+
+.tarifs-zone-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.tarifs-zone-title {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  color: var(--emerald-900);
+  margin: 0;
+  padding-left: 0.65rem;
+  border-left: 3px solid var(--primary-gold);
+}
+
+.tarifs-zone-count {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #8c8479;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.tarifs-dash-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 0.4rem 0.9rem;
+}
+
+.tarifs-dash-list li {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.tarifs-dash-list li::before {
+  content: "- ";
+  color: var(--primary-gold);
+  font-weight: 700;
+}
+
+.tarifs-quote-cta {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--emerald-900);
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  color: #fff;
+}
+
+.tarifs-quote-cta__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #fff;
+}
+
+.tarifs-quote-cta__text {
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+  opacity: 0.92;
+  font-size: 1rem;
+}
+
+.tarifs-quote-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.5rem;
+  background: #fff;
+  color: var(--emerald-900);
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tarifs-disclaimer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #f9f7f2;
+  border-radius: 16px;
+  border: 1px solid #e5e0d8;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tarifs-disclaimer-logo {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.tarifs-disclaimer-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.tarifs-disclaimer-text {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .tarifs-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  .tarifs-zones-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tarifs-page {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .tarifs-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .tarifs-back-btn {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .tarifs-hero {
+    margin-bottom: 2rem;
+    padding: 1.4rem 1rem;
+    border-left: none;
+    text-align: left;
+  }
+
+  .tarifs-hero-sub {
+    font-size: 1rem;
+  }
+
+  .tarifs-zone-section {
+    border-radius: 14px;
+    padding: 1rem 0.9rem;
+  }
+
+  .tarifs-zone-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .tarifs-zone-title {
+    font-size: 1.1rem;
+    border-left-width: 2px;
+    padding-left: 0.5rem;
+  }
+
+  .tarifs-zone-count {
+    font-size: 0.68rem;
+  }
+
+  .tarifs-dash-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .tarifs-dash-list li {
+    font-size: 0.88rem;
+  }
+
+  .tarifs-quote-cta {
+    margin-top: 2.2rem;
+    padding: 1.35rem 1rem;
+    border-radius: 14px;
+    gap: 1rem;
+  }
+
+  .tarifs-quote-cta__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tarifs-disclaimer {
+    margin-top: 2rem;
+    padding: 1.1rem 0.9rem;
+    gap: 0.8rem;
+  }
+
+  .tarifs-disclaimer-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .tarifs-disclaimer-logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .tarifs-disclaimer-text {
+    font-size: 0.86rem;
+  }
+}
+/* Page Tarifs La Reinette */
+
+.tarifs-page {
+  padding-top: 120px;
+  padding-bottom: 8rem;
+  background:
+    radial-gradient(circle at 5% 5%, rgba(212, 175, 55, 0.08) 0, transparent 35%),
+    radial-gradient(circle at 95% 10%, rgba(6, 78, 59, 0.08) 0, transparent 30%),
+    #fff;
+  min-height: 100vh;
+}
+
+.tarifs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarifs-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--emerald-900);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+}
+
+.tarifs-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  border: 1px solid #eee7db;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f7f2 100%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+}
+
+.tarifs-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--emerald-900);
+  line-height: 1.1;
+}
+
+.tarifs-hero-sub {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.tarifs-zones-intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarifs-zone-section {
+  margin-bottom: 0;
+  border: 1px solid #ece6db;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #fff 0%, #fbf9f4 100%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+  padding: 1.2rem 1.2rem 1rem;
+}
+
+.tarifs-zones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.tarifs-zone-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.85rem;
+}
+
+.tarifs-zone-title {
+  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
+  color: var(--emerald-900);
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--primary-gold);
+}
+
+.tarifs-zone-count {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7b8796;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tarifs-dash-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 0.45rem 1rem;
+}
+
+.tarifs-dash-list li {
+  color: #4e6174;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.tarifs-dash-list li::before {
+  content: "— ";
+  color: var(--primary-gold);
+  font-weight: 700;
+}
+
+.tarifs-zone-highlight {
+  border: 1px solid #ece5d9;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #fff 0%, #f8f5ee 100%);
+  padding: 1.25rem 1.1rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+}
+
+.tarifs-zone-highlight h2 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--emerald-900);
+  margin: 0 0 0.5rem;
+}
+
+.tarifs-zone-highlight p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.tarifs-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 300px));
+  justify-content: start;
+  gap: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.tarifs-split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2.5rem;
+  padding: 1.1rem;
+  border-radius: 22px;
+  border: 1px solid #ece6db;
+  background: #fff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.04);
+}
+
+.tarifs-split-row.is-reverse .tarifs-split-card-wrap {
+  order: 2;
+}
+
+.tarifs-split-row.is-reverse .tarifs-map-panel {
+  order: 1;
+}
+
+.tarifs-split-card-wrap .tarifs-card {
+  height: 100%;
+}
+
+.tarifs-map-panel {
+  border: 1px solid #ece6db;
+  border-radius: 18px;
+  padding: 1.4rem;
+  background: linear-gradient(165deg, #ffffff 0%, #f8f9fb 100%);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.05);
+}
+
+.tarifs-map-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-weight: 800;
+  color: var(--primary-gold);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 999px;
+  padding: 0.38rem 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.tarifs-map-title {
+  margin: 0 0 0.4rem;
+  color: var(--emerald-900);
+  font-size: 1.35rem;
+}
+
+.tarifs-map-subtitle {
+  margin: 0 0 1rem;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.tarifs-map-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+
+.tarifs-map-chip {
+  background: #eef6f3;
+  color: #0f5f4b;
+  border: 1px solid rgba(15, 95, 75, 0.16);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.tarifs-map-frame-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ece7dc;
+}
+
+.tarifs-card {
+  background: linear-gradient(180deg, #fff 0%, #fcfbf8 100%);
+  border-radius: 18px;
+  border: 1px solid #ebe3d7;
+  padding: 1.35rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarifs-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 58px rgba(0, 0, 0, 0.08);
+}
+
+.tarifs-card-zone {
+  font-size: 0.67rem;
+  font-weight: 900;
+  color: var(--primary-gold);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.tarifs-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.9rem;
+  color: var(--emerald-900);
+}
+
+.tarifs-card-price {
+  margin-bottom: 0.9rem;
+}
+
+.tarifs-card-separator {
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0, var(--primary-gold) 50%, transparent 100%);
+  margin-bottom: 0.9rem;
+}
+
+.tarifs-card-price {
+  margin-bottom: 2.2rem;
+}
+
+.tarifs-card-separator {
+  width: 34px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0, var(--primary-gold) 50%, transparent 100%);
+  margin-bottom: 2rem;
+}
+
+.tarifs-card-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.tarifs-card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin-bottom: 0.45rem;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+.tarifs-card-features li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  background: var(--primary-gold);
+  border-radius: 50%;
+}
+
+.tarifs-card-features li:nth-child(-n + 6) {
+  font-weight: 600;
+  color: var(--emerald-900);
+}
+
+.tarifs-card-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #0f766e 0%, #064e3b 100%);
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.tarifs-card-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(6, 78, 59, 0.25);
+}
+
+.tarifs-card-actions {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.tarifs-card-map-wrap {
+  width: 100%;
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ece7dc;
+  margin: 0.25rem 0 0.7rem;
+}
+
+.tarifs-card-btn--quote {
+  background: #fff;
+  border-color: var(--primary-gold);
+  color: var(--primary-gold);
+}
+
+.tarifs-card-btn--quote:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(212, 175, 55, 0.25);
+  background: var(--primary-gold);
+  color: #fff;
+}
+
+.tarifs-quote-cta {
+  margin-top: 4rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #064e3b 0%, #0f766e 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #fff;
+}
+
+.tarifs-quote-cta__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #fff;
+}
+
+.tarifs-quote-cta__text {
+  margin: 0;
+  max-width: 520px;
+  line-height: 1.6;
+  opacity: 0.92;
+  font-size: 1rem;
+}
+
+.tarifs-quote-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1rem 1.75rem;
+  background: #fff;
+  color: var(--emerald-900);
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarifs-quote-cta__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* Bandeau mention légale + logo à gauche */
+.tarifs-disclaimer {
+  margin-top: 4rem;
+  padding: 1.75rem 2rem;
+  background: #f9f7f2;
+  border-radius: 16px;
+  border: 1px solid #e5e0d8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tarifs-disclaimer-logo {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.tarifs-disclaimer-logo img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.tarifs-disclaimer-text {
+  flex: 1;
+  min-width: 0;
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0;
+  text-align: left;
+}
+
+/* Tablette / iPad */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tarifs-page {
+    padding-top: 140px;
+    padding-bottom: 6rem;
+  }
+
+  .tarifs-hero {
+    margin-bottom: 3rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .tarifs-hero h1 {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+  }
+
+  .tarifs-zones-intro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tarifs-pricing-grid {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .tarifs-zones-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .tarifs-zone-section {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .tarifs-card-map-wrap {
+    height: 135px;
+  }
+
+  .tarifs-split-row {
+    grid-template-columns: 1fr;
+    padding: 0.95rem;
+  }
+
+  .tarifs-split-row.is-reverse .tarifs-split-card-wrap,
+  .tarifs-split-row.is-reverse .tarifs-map-panel {
+    order: initial;
+  }
+
+  .tarifs-map-frame-wrap {
+    min-height: 300px;
+  }
+
+  .tarifs-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .tarifs-disclaimer {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .tarifs-disclaimer-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarifs-page {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+
+  .tarifs-back-btn {
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .tarifs-hero {
+    margin-bottom: 2.5rem;
+    padding: 1.6rem 1rem;
+    border-radius: 18px;
+  }
+
+  .tarifs-hero-sub {
+    font-size: 1rem;
+  }
+
+  .tarifs-zones-intro {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .tarifs-pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tarifs-zones-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .tarifs-zone-section {
+    border-radius: 14px;
+    padding: 0.9rem 0.8rem;
+  }
+
+  .tarifs-zone-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .tarifs-zone-title {
+    font-size: 1.15rem;
+    padding-left: 0.6rem;
+    border-left-width: 3px;
+  }
+
+  .tarifs-zone-count {
+    font-size: 0.7rem;
+  }
+
+  .tarifs-dash-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .tarifs-dash-list li {
+    font-size: 0.84rem;
+  }
+
+  .tarifs-split-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 16px;
+  }
+
+  .tarifs-split-row.is-reverse .tarifs-split-card-wrap,
+  .tarifs-split-row.is-reverse .tarifs-map-panel {
+    order: initial;
+  }
+
+  .tarifs-map-panel {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .tarifs-map-title {
+    font-size: 1.15rem;
+  }
+
+  .tarifs-map-frame-wrap {
+    min-height: 240px;
+  }
+
+  .tarifs-card {
+    padding: 1.1rem 0.9rem;
+  }
+
+  .tarifs-card-map-wrap {
+    height: 125px;
+  }
+
+  .tarifs-disclaimer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .tarifs-disclaimer-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .tarifs-disclaimer-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tarifs-disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+}

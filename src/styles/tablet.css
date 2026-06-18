@@ -1,0 +1,45 @@
+/**
+ * Tablettes & iPad (769px – 1024px)
+ * Entre mobile (≤768) et desktop (≥1025)
+ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --top-banner-height: 3rem;
+    --navbar-height: 5.25rem;
+  }
+
+  body {
+    padding-top: calc(var(--top-banner-height) + var(--navbar-height));
+  }
+
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4.5vw, 2.85rem);
+    margin-bottom: 2rem;
+  }
+
+  .py-lg,
+  .py-md {
+    padding: 4.5rem 0;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  /* Boutons : largeur auto sur tablette (sauf .btn-block) */
+  .btn:not(.btn-block) {
+    width: auto;
+    min-height: 44px;
+  }
+
+  section[id],
+  div[id] {
+    scroll-margin-top: calc(var(--navbar-height) + var(--top-banner-height) + 72px);
+  }
+}

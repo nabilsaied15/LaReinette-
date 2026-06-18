@@ -1,0 +1,101 @@
+.scrolling-banner-container {
+  width: 100%;
+  height: 60px; /* Slimmer for a more professional look */
+  background: linear-gradient(-45deg, #053b27, #064e3b, #065f46, #053b27);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: fixed;
+  top: calc(var(--top-banner-height) + var(--navbar-height));
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.banner-premium-text {
+  display: flex;
+  flex-direction: row; /* Horizontal for a cleaner line */
+  align-items: center;
+  gap: 1.5rem;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.1rem; /* Smaller, more elegant size */
+  font-weight: 700;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+/* Shimmer Effect on Text */
+.banner-premium-text span {
+  background: linear-gradient(90deg, #fff 0%, #D4AF37 50%, #fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 4s linear infinite;
+}
+
+@keyframes textShimmer {
+  to { background-position: 200% center; }
+}
+
+.banner-crown {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+  animation: sparklePulse 3s ease-in-out infinite;
+}
+
+@keyframes sparklePulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.2) rotate(15deg); opacity: 1; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scrolling-banner-container {
+    height: 54px;
+  }
+
+  .banner-premium-text {
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    gap: 1.25rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scrolling-banner-container {
+    height: 50px;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, visibility 0.35s;
+    will-change: transform;
+  }
+
+  .scrolling-banner-container.banner-hidden {
+    transform: translateY(calc(-100% - var(--top-banner-height) - var(--navbar-height)));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .banner-premium-text {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    gap: 1rem;
+  }
+  .banner-crown {
+    width: 18px;
+    height: 18px;
+  }
+}

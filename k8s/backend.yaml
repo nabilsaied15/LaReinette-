@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: lareinette
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lareinette
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: lareinette
+        tier: backend
+    spec:
+      containers:
+      - name: backend
+        image: lareinette-backend:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: lareinette
+    tier: backend
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: ClusterIP

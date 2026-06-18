@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /direction/admin
+Disallow: /direction/admin/
+
+Sitemap: https://www.asad-bourg-la-reine.fr/sitemap.xml

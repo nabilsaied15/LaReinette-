@@ -1,0 +1,464 @@
+/* Clean and neutral tarifs page */
+
+.tarifs-page {
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.tarifs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarifs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  color: var(--primary-gold);
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.tarifs-hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarifs-hero-content {
+  flex: 1;
+  text-align: center;
+}
+
+.tarifs-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--emerald-900);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.tarifs-hero h1 span {
+  color: var(--primary-gold);
+}
+
+.tarifs-hero-sub {
+  margin-top: 1rem;
+  font-size: 1.35rem; /*ici*/
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.tarifs-mascot-container {
+  flex: 1 1 320px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.tarifs-mascot-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130%;
+  height: 130%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 65%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.tarifs-mascot-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  mask-image: radial-gradient(circle at center, black 65%, transparent 98%);
+  -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 98%);
+  filter: brightness(1.02) contrast(1.05);
+  position: relative;
+  z-index: 1;
+}
+
+.tarifs-map-section {
+  margin-bottom: 1.3rem;
+}
+
+.tarifs-map-head {
+  margin-bottom: 0.5rem;
+}
+
+.tarifs-map-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: var(--emerald-900);
+}
+
+.tarifs-map-sub {
+  margin: 0.25rem 0 0;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.tarifs-zone-map {
+  position: relative;
+  min-height: 280px;
+  border: 1px solid #e5e0d8;
+  border-radius: 18px;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.tarifs-zone-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+  display: block;
+}
+
+.tarifs-map-overlay {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e5e0d8;
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  color: var(--emerald-900);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.tarifs-map-overlay img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.tarifs-map-overlay--brand {
+  right: 10px;
+  bottom: 10px;
+  background: rgba(16, 185, 129, 0.95);
+  color: #fff;
+  border-color: var(--primary-green);
+}
+
+.tarifs-map-overlay--local {
+  left: 10px;
+  top: 10px;
+  background: var(--primary-green);
+  color: #fff;
+  border-color: var(--primary-green);
+}
+
+.tarifs-map-overlay--nearby {
+  left: 10px;
+  top: 42px;
+  background: var(--primary-gold);
+  color: #fff;
+  border-color: var(--primary-gold);
+}
+
+.tarifs-map-overlay--nearby-94 {
+  left: 10px;
+  top: 74px;
+  background: var(--emerald-700);
+  color: #fff;
+  border-color: var(--emerald-700);
+}
+
+.tarifs-map-overlay--hospital {
+  right: 10px;
+  top: 10px;
+  background: var(--emerald-800);
+  color: #fff;
+  border-color: var(--emerald-800);
+}
+
+.tarifs-map-overlay--distance {
+  left: 10px;
+  bottom: 10px;
+  background: var(--emerald-900);
+  color: #fff;
+  border-color: var(--emerald-900);
+}
+
+.tarifs-zones-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+
+.tarifs-zone-section {
+  padding: 0;
+}
+
+.tarifs-zone-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.tarifs-zone-title {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  color: var(--emerald-900);
+}
+
+.tarifs-zone-count {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary-gold);
+  white-space: nowrap;
+}
+
+.tarifs-dash-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 0.6rem 1.4rem;
+}
+
+.tarifs-dash-list li {
+  color: var(--emerald-900);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.4rem;
+}
+
+.tarifs-dash-list li::before {
+  content: "- ";
+  color: var(--primary-gold);
+  font-weight: 700;
+}
+
+.tarifs-dash-price {
+  font-size: 1.2rem;
+  color: var(--primary-gold);
+  white-space: nowrap;
+  min-width: 130px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.tarifs-quote-cta {
+  margin-top: 3rem;
+  padding-top: 1.7rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.tarifs-quote-cta__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--emerald-900);
+}
+
+.tarifs-quote-cta__text {
+  margin: 0;
+  max-width: 560px;
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 1.25rem;
+}
+
+.tarifs-quote-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.1rem 1.8rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--emerald-900);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tarifs-disclaimer {
+  margin-top: 1.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e0d8;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.tarifs-disclaimer-logo {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarifs-disclaimer-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tarifs-disclaimer-text {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .tarifs-page {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  .tarifs-hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .tarifs-mascot-container {
+    flex: 1 1 280px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tarifs-page {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .tarifs-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .tarifs-back-btn {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .tarifs-hero {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .tarifs-hero-content {
+    order: 2;
+  }
+
+  .tarifs-mascot-container {
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+    order: 1;
+    margin: 0 auto 0.5rem;
+  }
+
+  .tarifs-mascot-halo {
+    width: 120%;
+    height: 120%;
+  }
+
+  .tarifs-hero h1 {
+    font-size: clamp(1.9rem, 9vw, 2.7rem);
+  }
+
+  .tarifs-hero-sub {
+    font-size: 1rem;
+  }
+
+  .tarifs-map-title {
+    font-size: 1rem;
+  }
+
+  .tarifs-map-sub {
+    font-size: 0.82rem;
+  }
+
+  .tarifs-zone-map {
+    min-height: 220px;
+    border-radius: 14px;
+  }
+
+  .tarifs-zone-map iframe {
+    min-height: 220px;
+  }
+
+  .tarifs-map-overlay {
+    padding: 0.28rem 0.5rem;
+    font-size: 0.64rem;
+  }
+
+  .tarifs-map-overlay--brand { right: 8px; bottom: 8px; }
+  .tarifs-map-overlay--local { left: 8px; top: 8px; }
+  .tarifs-map-overlay--nearby { left: 8px; top: 34px; }
+  .tarifs-map-overlay--nearby-94 { left: 8px; top: 60px; }
+  .tarifs-map-overlay--hospital { right: 8px; top: 8px; }
+  .tarifs-map-overlay--distance { left: 8px; bottom: 8px; }
+
+  .tarifs-zone-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .tarifs-zone-title {
+    font-size: 1.1rem;
+  }
+
+  .tarifs-zone-count {
+    font-size: 0.67rem;
+  }
+
+  .tarifs-dash-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tarifs-dash-list li {
+    font-size: 1.2rem;
+  }
+
+  .tarifs-dash-price {
+    min-width: 110px;
+    font-size: 1.1rem;
+  }
+
+  .tarifs-quote-cta__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tarifs-disclaimer-text {
+    font-size: 0.84rem;
+  }
+}

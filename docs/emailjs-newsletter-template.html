@@ -1,0 +1,66 @@
+<!--
+  TEMPLATE EMAILJS — NEWSLETTER LA REINETTE
+  =========================================
+  1. EmailJS → Email Templates → ton template Newsletter
+  2. Settings (IMPORTANT pour l'objet du mail) :
+     - To Email    : {{to_email}}
+     - From Name   : {{from_name}}
+     - Reply To    : {{reply_to}}
+     - Subject     : {{subject}}
+       ⚠️ Remplace "Contact us" ou tout texte fixe par {{subject}} uniquement !
+       Si ton template utilise {{title}}, ça marche aussi (le site envoie les deux).
+  3. Content → colle TOUT le HTML ci-dessous (un seul en-tête vert)
+  4. NE PAS remettre un second bandeau autour de {{{message_html}}}
+  5. Test avec message_html simple : "Bonjour,<br><br>Votre message ici."
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="margin:0;padding:0;background-color:#f3f4f6;font-family:Arial,Helvetica,sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color:#f3f4f6;padding:24px 12px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="max-width:600px;width:100%;border-collapse:collapse;">
+
+          <!-- UN SEUL en-tête (ne pas dupliquer dans message_html) -->
+          <tr>
+            <td style="background-color:#064e3b;padding:28px 24px;text-align:center;border-radius:12px 12px 0 0;">
+              <h1 style="margin:0;color:#d1fae5;font-size:24px;font-weight:bold;line-height:1.2;">La Reinette</h1>
+              <p style="margin:8px 0 0;color:#a7f3d0;font-size:12px;letter-spacing:2px;text-transform:uppercase;">ASAD — Bourg-la-Reine</p>
+            </td>
+          </tr>
+
+          <!-- Message admin / bienvenue (texte seul depuis le site) -->
+          <tr>
+            <td style="background-color:#ffffff;padding:32px 28px;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;color:#1f2937;font-size:16px;line-height:1.65;">
+              {{{message_html}}}
+            </td>
+          </tr>
+
+          <!-- Pied de page -->
+          <tr>
+            <td style="background-color:#f9fafb;padding:22px 28px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 12px 12px;text-align:center;">
+              <p style="margin:0 0 6px;font-size:14px;color:#374151;font-weight:bold;">La Reinette</p>
+              <p style="margin:0 0 4px;font-size:13px;color:#6b7280;">Transport accompagné pour seniors</p>
+              <p style="margin:0 0 4px;font-size:13px;color:#6b7280;">3-5, allée Françoise Dolto — 92340 Bourg-la-Reine</p>
+              <p style="margin:0;font-size:13px;">
+                <a href="tel:0179717542" style="color:#064e3b;text-decoration:none;">01 79 71 75 42</a>
+                &nbsp;·&nbsp;
+                <a href="mailto:lareinette@asad-bourg-la-reine.fr" style="color:#064e3b;text-decoration:none;">lareinette@asad-bourg-la-reine.fr</a>
+              </p>
+              <p style="margin:14px 0 0;font-size:11px;color:#9ca3af;">
+                Vous recevez cet e-mail car vous êtes inscrit à notre newsletter.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
