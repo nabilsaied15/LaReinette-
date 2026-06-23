@@ -480,8 +480,103 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleSave = () => {
-    updateSettings(localSettings);
+  const syncDestinations = async (pricingList) => {
+    try {
+      const { data: dbDestinations, error: fetchError } = await supabase
+        .from("destinations")
+        .select("id, location");
+      if (fetchError) throw fetchError;
+
+      const updatedPricingList = [];
+      for (let i = 0; i < pricingList.length; i++) {
+        const dest = { ...pricingList[i] };
+        if (!dest.location) continue;
+
+        const destData = {
+          zone: dest.zone,
+          location: dest.location,
+          aller: dest.aller,
+          ar: dest.ar,
+          features: Array.isArray(dest.features)
+            ? dest.features
+            : typeof dest.features === "string"
+              ? dest.features.split(",").map((f) => f.trim()).filter(Boolean)
+              : [],
+          call_only: !!(dest.callOnly || dest.call_only),
+          latitude: dest.latitude ? parseFloat(dest.latitude) : null,
+          longitude: dest.longitude ? parseFloat(dest.longitude) : null,
+        };
+
+        if (dest.id) {
+          await supabase
+            .from("destinations")
+            .update(destData)
+            .eq("id", dest.id);
+        } else {
+          const existingInDb = dbDestinations.find(
+            (d) => (d.location || "").trim().toLowerCase() === (dest.location || "").trim().toLowerCase()
+          );
+
+          if (existingInDb) {
+            dest.id = existingInDb.id;
+            await supabase
+              .from("destinations")
+              .update(destData)
+              .eq("id", existingInDb.id);
+          } else {
+            const { data: insertData, error: insertError } = await supabase
+              .from("destinations")
+              .insert([destData])
+              .select();
+            if (insertError) {
+              console.error("Error inserting destination:", insertError);
+            } else if (insertData && insertData[0]) {
+              dest.id = insertData[0].id;
+            }
+          }
+        }
+        updatedPricingList.push(dest);
+      }
+
+      // Supprimer toutes les destinations de la base de données qui ne figurent plus dans la liste mise à jour
+      const keptIds = updatedPricingList.map((p) => p.id).filter(Boolean);
+      const { data: latestDbDestinations } = await supabase
+        .from("destinations")
+        .select("id");
+
+      if (latestDbDestinations && latestDbDestinations.length > 0) {
+        const toDeleteIds = latestDbDestinations
+          .map((d) => d.id)
+          .filter((id) => !keptIds.includes(id));
+
+        if (toDeleteIds.length > 0) {
+          const { error: deleteError } = await supabase
+            .from("destinations")
+            .delete()
+            .in("id", toDeleteIds);
+          if (deleteError) {
+            console.error("Error deleting old/duplicate destinations:", deleteError);
+          }
+        }
+      }
+
+      return updatedPricingList;
+    } catch (err) {
+      console.error("Error syncing destinations table:", err);
+      return pricingList;
+    }
+  };
+
+  const handleSave = async () => {
+    let nextSettings = { ...localSettings };
+
+    if (activeTab === "destinations" || activeTab === "reinette") {
+      const syncedPricing = await syncDestinations(localSettings.laReinette.pricing);
+      nextSettings.laReinette.pricing = syncedPricing;
+      setLocalSettings(nextSettings);
+    }
+
+    updateSettings(nextSettings);
     setShowSuccess(true);
     setTimeout(() => setShowSuccess(false), 3000);
   };
@@ -550,6 +645,7 @@ const AdminDashboard = () => {
         : null,
     };
 
+    let newId = null;
     try {
       if (editingDestination !== null) {
         // Mise à jour dans Supabase
@@ -559,17 +655,23 @@ const AdminDashboard = () => {
           .eq("id", editingDestination.id);
 
         if (error) throw error;
+        newId = editingDestination.id;
       } else {
         // Insertion dans Supabase
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from("destinations")
-          .insert([destinationData]);
+          .insert([destinationData])
+          .select();
 
         if (error) throw error;
+        if (data && data[0]) {
+          newId = data[0].id;
+        }
       }
 
       // Mettre à jour les settings locaux aussi
       const newDestination = {
+        id: newId,
         zone: destinationForm.zone,
         location: destinationForm.location,
         aller: destinationForm.aller,
@@ -626,12 +728,17 @@ const AdminDashboard = () => {
     try {
       // Supprimer de Supabase si c'est une destination de Supabase
       if (destination.id) {
-        const { error } = await supabase
+        await supabase
           .from("destinations")
           .delete()
           .eq("id", destination.id);
-        if (error) throw error;
       }
+      
+      const { error } = await supabase
+        .from("destinations")
+        .delete()
+        .eq("location", destination.location);
+      if (error) throw error;
 
       // Supprimer des settings locaux
       const next = JSON.parse(JSON.stringify(localSettings));
@@ -1792,6 +1899,9 @@ const AdminDashboard = () => {
                               <option value="Zone Locale">Zone Locale</option>
                               <option value="Zone Limitrophe 92">
                                 Zone Limitrophe 92
+                              </option>
+                              <option value="Zone Limitrophe 92 Autres">
+                                Autres communes du 92
                               </option>
                               <option value="Zone Limitrophe 94">
                                 Zone Limitrophe 94

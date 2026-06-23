@@ -1244,6 +1244,46 @@ export const SettingsProvider = ({ children }) => {
             }
           }
 
+          // Fetch and merge destinations table
+          try {
+            const { data: dbDestinations } = await supabase
+              .from("destinations")
+              .select("*");
+
+            if (dbDestinations && dbDestinations.length > 0) {
+              const pricingList = [...(mergedData.laReinette.pricing || [])];
+              
+              dbDestinations.forEach((dbDest) => {
+                const mappedDest = {
+                  id: dbDest.id,
+                  zone: dbDest.zone,
+                  location: dbDest.location,
+                  aller: dbDest.aller,
+                  ar: dbDest.ar,
+                  features: dbDest.features || [],
+                  callOnly: dbDest.call_only,
+                  call_only: dbDest.call_only,
+                  latitude: dbDest.latitude,
+                  longitude: dbDest.longitude,
+                };
+
+                const existingIdx = pricingList.findIndex(
+                  (p) => p.location.trim().toLowerCase() === dbDest.location.trim().toLowerCase()
+                );
+
+                if (existingIdx !== -1) {
+                  pricingList[existingIdx] = mappedDest;
+                } else {
+                  pricingList.push(mappedDest);
+                }
+              });
+
+              mergedData.laReinette.pricing = pricingList;
+            }
+          } catch (destErr) {
+            console.error("Error merging destinations table:", destErr);
+          }
+
           // Automatically persist this migration if it happened
           if (updated) {
             supabase

@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'pwa-512x512.png'],
+      includeAssets: ['favicon.png', 'pwa-512x512.png'],
       workbox: {
         // Bundle JS principal ~2.25 Mo : limite Workbox par défaut = 2 Mo
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,

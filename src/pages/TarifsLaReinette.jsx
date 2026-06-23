@@ -180,7 +180,8 @@ const TarifsLaReinette = () => {
     "Zone Limitrophe 92": "zone92",
     "Zone Limitrophe 92 Autres": "zone92autres",
     "Zone Limitrophe 94": "zone94",
-    "Longue Distance": "distance",
+    "Longue Distance": "paris",
+    "Zone Hospitalière": "hospital",
   };
 
   const preferredOrder = [
@@ -195,7 +196,7 @@ const TarifsLaReinette = () => {
   const getZoneKey = (destination) => {
     const location = destination?.location || "";
 
-    if (/paris/i.test(location) || /orly/i.test(location)) return "paris";
+    if (/paris/i.test(location) || /orly/i.test(location) || destination?.callOnly || destination?.call_only) return "paris";
 
     // Check if location is in neighboring municipalities of Bourg-la-Reine
     if (COMMUNES_LIMITROPHES_BOURG_LA_REINE.includes(location)) {
@@ -207,7 +208,7 @@ const TarifsLaReinette = () => {
       return "zone92autres";
     }
 
-    return zoneKeyByZone[destination?.zone] || "distance";
+    return zoneKeyByZone[destination?.zone] || "paris";
   };
 
   // Créer des objets de coordonnées dynamiques à partir des settings

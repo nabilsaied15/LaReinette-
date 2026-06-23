@@ -101,9 +101,9 @@ const Hero = () => {
               textShadow: "0 4px 15px rgba(0,0,0,0.5)",
             }}
           >
-            Votre spécialiste réginaburgien du transport au service des <br />
+            Votre spécialiste réginaburgien du transport au services des <br />
             <span style={{ color: "var(--primary-gold)", fontStyle: "italic" }}>
-              Réginaburgiennes et Réginaburgiens
+              reginaburgiennes et réginaburgiens
             </span>
           </motion.h1>
 
